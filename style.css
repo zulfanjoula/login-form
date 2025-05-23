@@ -1,0 +1,213 @@
+/* Reset dan penataan dasar */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Latar belakang gambar */
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('background-image.jpg') no-repeat center center;
+  background-size: cover;
+  z-index: -1;
+}
+
+/* Body */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5); /* Opsional: lapisan gelap di atas gambar */
+}
+
+/* Kontainer login */
+.login-container {
+  background: rgba(255, 255, 255, 0.1); /* Transparan */
+  backdrop-filter: blur(10px); /* Blur background di belakang */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  width: 300px;
+  color: rgb(234, 220, 220);
+}
+
+/* Judul login */
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  color: #ffffff;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  letter-spacing: 1px;
+}
+.login-container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  width: 350px;
+  color: rgb(234, 220, 220);
+}
+
+
+/* Grup form */
+.form-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 14px 10px 10px 10px;
+  font-size: 16px;
+  border: 1px solid #fefefe;
+  border-radius: 4px;
+  background-color: transparent;
+  color: rgb(245, 245, 245);
+}
+
+.form-group label {
+  position: absolute;
+  top: 14px;
+  left: 10px;
+  background-color: transparent;
+  padding: 0 5px;
+  color: #f3f8f4;
+  transition: all 0.2s ease;
+  pointer-events: none;
+}
+
+.form-group input:focus + label,
+.form-group input:hover + label,
+.form-group input:valid + label {
+  top: -10px;
+  left: 5px;
+  font-size: 12px;
+  color: #f9faf9fe;
+}
+
+/* Tombol kirim */
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #d5e6d6;
+  border: none;
+  color: rgb(6, 5, 5);
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #c9d9c9;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
+  z-index: 999;
+}
+
+/* Logo navbar */
+.navbar-logo {
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  cursor: default;
+}
+
+/* Tautan navbar */
+.navbar-links a {
+  margin-left: 30px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #4CAF50;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-logo {
+    margin-bottom: 10px;
+  }
+
+  .navbar-links {
+    width: 100%;
+    text-align: left;
+  }
+
+  .navbar-links a {
+    display: block;
+    padding: 10px 15px;
+    width: 100%;
+  }
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3); /* transparan */
+  backdrop-filter: blur(5px);
+  color: white;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  z-index: 999;
+}
+
+/* Teks registrasi */
+.register-text {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.register-text a {
+  color: #f9fdf9;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-text a:hover {
+  text-decoration: underline;
+}
